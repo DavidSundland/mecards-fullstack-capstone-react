@@ -1,0 +1,872 @@
+/* Color palette - http://paletton.com/#uid=3110q0khcw03lDT75HadULeamUJ */
+
+/* -------------------------------------
+CSS reset
+Is a short set of CSS rules that resets the styling of all HTML elements to a consistent baseline so the website will look the same on all browsers
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+    /*reset Firefox user agent styles*/
+    -moz-margin-before: 0px;
+    -moz-margin-after: 0px;
+    -moz-margin-start: 0px;
+    -moz-margin-end: 0px;
+    -moz-padding-before: 0px;
+    -moz-padding-after: 0px;
+    -moz-padding-start: 0px;
+    -moz-padding-end: 0px;
+    /*reset Internet Explorer user agent styles*/
+    -ms-margin-before: 0px;
+    -ms-margin-after: 0px;
+    -ms-margin-start: 0px;
+    -ms-margin-end: 0px;
+    -ms-padding-before: 0px;
+    -ms-padding-after: 0px;
+    -ms-padding-start: 0px;
+    -ms-padding-end: 0px;
+    /*reset Opera user agent styles*/
+    -o-margin-before: 0px;
+    -o-margin-after: 0px;
+    -o-margin-start: 0px;
+    -o-margin-end: 0px;
+    -o-padding-before: 0px;
+    -o-padding-after: 0px;
+    -o-padding-start: 0px;
+    -o-padding-end: 0px;
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #bdbaba;
+    height: 100%;
+    background-color: rgba(255,255,255,.7); /* To "soften" the background image in the HTML */
+}
+
+
+main {
+    padding: 1% 8%;
+}
+
+h1 {
+    color: #715CAF;
+    font-size: 2em;
+    text-align: center;
+    /*    font-family: 'Quicksand', sans-serif;*/
+    font-family: 'Exo 2', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    font-size: 34px;
+    color: #4E88A1;
+    padding-top: 15px;
+    /*    padding-bottom: 20px;*/
+}
+
+
+.headerSubtitle {
+    text-align: center;
+    font-size: 1.3em;
+    color: #345767;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+button {
+    cursor: pointer;
+    margin: 7px;
+    padding: 15px;
+    border-radius: 20px;
+    color: white;
+    background-color: #5B6DAD;
+    font-size: .9em;
+    box-shadow: 2px 2px lightgray;
+    font-family: arial;
+}
+
+.styleButton  {
+    /*    padding: 12px 5px;*/
+    padding: 2px;
+    height: 50px;
+    width: 40px;
+    margin: 5px;
+}
+
+.leftButton {
+    margin-right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.rightButton {
+    margin-left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+#borderButtons {
+    /*    margin-top: 50px;*/
+    /*    bottom: 0;*/
+}
+
+.borderButton {
+    padding-bottom: 6px;
+    width: 50px;
+}
+
+.goButton {
+    background-color: #1B8A48;
+    box-shadow: 3px 3px lightgray;
+}
+
+button:hover {
+    text-shadow: 0 0 1px white;
+    background-color: #2f3d6e;
+    box-shadow: 1px 1px lightgray;
+}
+
+input, textarea {
+    box-shadow: 2px 2px 2px #0000008a inset;
+    /* ADJUST COLOR ONCE COLOR PALATTE FINALIZED */
+    margin: 5px;
+    padding-left: 10px;
+    /*    font-family: 'Cutive Mono', monospace;*/
+}
+
+textarea {
+    height: 180px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+}
+
+#photoQuery {
+    width: 50%;
+}
+
+.oneFont {
+    font-family: "Roboto";
+}
+.twoFont {
+    font-family: "Gugi";
+}
+.threeFont {
+    font-family: "Indie Flower";
+}
+.oneColor {
+    color: #6495ED;
+}
+.twoColor {
+    color: #C9F251;
+}
+.threeColor {
+    color: #FFFF55;
+}
+.smallFont {
+    font-size: 0.4em;
+}
+.mediumFont {
+    font-size: 0.6em;
+}
+.oneStyle {
+    text-shadow: 1px 1px black;
+}
+.twoStyle {
+    text-shadow: 1px 1px red;
+}
+.oneWeight {
+    font-weight: 100;
+}
+.twoWeight {
+    font-weight: 500;
+}
+.threeWeight {
+    font-weight: 900;
+}
+
+.middleArea {
+    margin-top: 50px;
+    margin-bottom: 50px;;
+}
+
+hr {
+    border: #5B6DAD solid 1px;
+    width: 60%;
+    margin: 20px auto;
+    /*    width: 90%;*/
+}
+
+
+.intro p, #login {
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 40px;
+    text-shadow: 1px 1px #FFBE76;
+}
+
+.intro p {
+    background-color: rgba(255, 255, 255, .6);
+    color: #202020;
+}
+
+#login {
+    background-color: rgba(113, 92, 175, .4);
+    color: #FFF6C7;
+}
+
+.newUser, .login, .prevCards {
+    width: 100%;
+    height: 100%;
+    padding: 20px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0) url("images/cardstore.jpg") no-repeat top center fixed;
+    background-size: cover;
+    z-index: 1001;
+}
+
+
+
+.newuserBox, .prevCardsBox {
+    /* center box in page */
+    position: absolute;
+    background-color: rgba(255,230,170,.8);
+    border: 5px ridge #B8B3C5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+    min-height: 40%;
+    max-height: 80%;
+    padding-bottom: 20px;
+}
+
+.prevCardsBox {
+    bottom: 10%;
+    overflow: auto;
+}
+
+
+
+.newUser,
+.userCard,
+.prevCards {
+    display: none;
+    text-align: center;
+    color: #715CAF;
+    font-weight: 800;
+}
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 110px;
+    background-color: rgba(0,0,0,.7);
+    font-size: .7em;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.toptip {
+    width: 120px;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -55px; /* Half of the tooltip width */
+}
+
+.bottomtip {
+    width: 120px;
+    top: 110%;
+    left: 50%;
+    margin-left: -55px; /* Half of the tooltip width */
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+#cardBox {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 0;
+    background-color: black;
+    height: 590px;
+    /*    border: 10px white none;*/
+}
+
+#cardBox img, #cardPreview img, #deliveredCard {
+    max-height: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /*    width: 100%;*/
+}
+
+#cardPreview {
+    height: 100%;
+}
+
+#cardPreview img {
+    display: block;
+}
+
+#photoCreds, #previewCreds {
+    color: rgba(255,255,255,.7);
+    /*    text-shadow: 2px 2px rgba(0,0,0,.7);*/
+    text-align: left;
+    bottom: 3px;
+    left: 3px;
+    position: absolute;
+    font-size: .7em;
+    background-color: black;
+}
+
+.cardHeader, .previewHeader {
+    position: absolute;
+    /*
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    */
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.bodyColumn {
+    padding-top: 60px;
+}
+
+.cardBody, .previewBody {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    /* center box in page */
+    /*
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    */
+}
+
+.portraitPic {
+    left: 60%;
+    transform: translate(-75%, -50%);
+}
+
+.cardFooter, #previewFooter {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+}
+
+#previewParent, #deliveredCardParent {
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#cardPreview {
+    position: relative;
+    margin: 20px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.otherOptions {
+    text-align: center;
+}
+
+footer {
+    /*    position: fixed;*/
+    background-color: #100200;
+    /*    border-top: 10px inset #830e02;*/
+    padding: 10px 0;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 0;
+    overflow: auto;
+    margin-top: 60px;
+    z-index: 40;
+}
+
+footer a {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.left {
+    float: left;
+    padding: 5px 20px 5px 12%;
+    /* Mirror image of .right */
+    width: 49%;
+}
+
+.right {
+    float: right;
+    padding: 5px 12% 5px 20px;
+    /* Need to be sure right margin clears right curtain so icons clickable */
+    width: 49%;
+    text-align: right;
+}
+
+.cardPickup {
+    background-color: #FFE6AD;
+    margin: 30px 0;
+    border: 1px solid #ccbff3;
+    padding: 5px 10px;
+    color: #715CAF;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+
+#copyToClipboard {
+    width: 5px;
+}
+#linkToCopy {
+    /*    text-decoration: underline;*/
+    color: #7AB7D1;
+    cursor: copy;
+}
+
+
+
+.hideMe {
+    /*    visibility: hidden;*/
+    display: none;
+}
+
+
+.invisible {
+    display: none;
+    /*    visibility: hidden;*/
+}
+
+.makeVisible {
+    /*    visibility: visible;*/
+    display: block;
+    /*    display: inline-block;*/
+    /*    z-index: 100;*/
+    /*    text-align: center;*/
+}
+
+.makeVisibleInline {
+    display: inline;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+
+.even {
+    background-color: #191919;
+    border-radius: 8px;
+    box-shadow: 2px 2px #333333;
+    /* #242424;*/
+}
+
+.odd {
+    margin-top: 2px;
+    background-color: #202020;
+}
+
+.address {
+    color: #FEAB67;
+}
+
+#map {
+    height: 400px;
+    width: 94%;
+    margin: 0 3%;
+}
+
+a {
+    text-decoration: none;
+    color: #5CB2C2;
+}
+
+a:hover {
+    color: #aee7f2;
+    text-shadow: 0 0 1px white;
+    cursor: pointer;
+}
+
+
+
+.listBox button {
+    font-size: .8em;
+    padding: 5px 8px;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+#reviewButton {
+    margin-bottom: 30px;
+}
+
+.closePreview {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+#closeVenue {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 701;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.star:hover {
+    text-shadow: 0 0 1px white;
+}
+
+.venueBox,
+.reviewBox,
+.newUser,
+.prevCards,
+.login {
+    width: 100%;
+    height: 100%;
+    padding: 20px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: black;
+}
+
+.venueBox,
+.newUser,
+.prevCardsBox,
+.login {
+    z-index: 101;
+}
+
+/*
+#prevCards {
+text-align: left;
+}
+
+#prevCards *  {
+margin: 20px 30px;
+}
+*/
+
+#prevCards .row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.prevCardsBackground {
+    width: 160px;
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.prevCards img {
+    height: 100%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prevCardsText {
+    padding-top: 30px;
+}
+
+#oldUserNewCard {
+    position: fixed;
+    bottom: 3%;
+}
+
+.login form,
+.newUser form {
+    padding-top: 60px;
+}
+
+.newUser form div {
+    margin-bottom: 15px;
+}
+
+.loginLabel {
+    text-align: right;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.loginInput {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.login input {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.login button {
+    margin: 10px;
+}
+
+.venueInfo {
+    margin-top: 50px;
+}
+
+.venueInfo img {
+    width: 80%;
+    border-radius: 20px;
+}
+
+.venueInfo iframe {
+    border-radius: 20px;
+}
+
+.venueNameHeader {
+    font-size: 2.2em;
+}
+
+.venueNameHeader a {
+    color: #CC1414;
+}
+
+.venueAddress {
+    font-size: 1.3em;
+    color: #FE6767;
+    text-align: left;
+    padding: 0 40px 0 20px;
+}
+
+.venueDescription {
+    text-align: left;
+    line-height: 2;
+    padding: 20px;
+}
+
+.userName {
+    color: #CC5297;
+    font-size: 1.3em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.userRatings p {
+    padding: 0 20px;
+    margin: 0;
+    color: #FEAB67;
+}
+
+.userReview {
+    text-align: left;
+    padding: 25px 6%;
+}
+
+#userReviews p {
+    margin: 10px;
+}
+
+#userReviews p:first-child {
+    margin-top: 30px;
+}
+
+.reviewBox {
+    z-index: 201;
+    position: fixed;
+}
+
+.userRatings form {
+    margin-top: 20px;
+}
+
+.commentBox {
+    margin-bottom: 30px;
+}
+
+.alertBoxContainer {
+    display: none;
+    top: 0;
+    height: 100%;
+    margin: 0%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 500;
+}
+
+.alertBox {
+    display: none;
+    position: fixed;
+    /* center box in page */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    background-color: black;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 50px;
+    z-index: 501;
+    border: 7px dotted #fed9ba;
+    /* creates solid lines inside & outside of dotted border */
+    box-shadow: inset 0 -1px 0 0 #FE6767, inset 0 1px 0 0 #FE6767, 0 1px 0 0 #FE6767, 0 -1px 0 0 #FE6767, inset 1px 0 0 0 #FE6767, inset -1px 0 0 0 #FE6767, 1px 0 0 0 #FE6767, -1px 0 0 0 #FE6767;
+}
+
+.alertBox button {
+    margin: 50px;
+    font-size: .8em;
+}
+
+form {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+
+.visibleAlert {
+    visibility: visible;
+    display: block;
+}
+
+
+
+/* ================================================================== */
+@media only screen and (max-width: 1300px) {
+
+}
+
+/* Goes from multi-column to single column at 1150 px */
+
+@media only screen and (max-width: 1150px) {
+    .styleButton  {
+        width: 35px;
+    }
+    .loginLabel {
+        text-align: center;
+    }
+
+    .loginInput {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    input  {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    body {
+        font-size: 20px;
+    }
+    #closeVenue {
+        top: auto;
+        bottom: 40px;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: 150px;
+    }
+    .alertBox {
+        width: 60%;
+        height: 60%;
+        font-size: 1.3em;
+    }
+    #reviews {
+        margin-bottom: 120px;
+        /* to make sure closeVenue button doesn't block bottom of page */
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        line-height: 1.3;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        font-size: 18px;
+    }
+    .alertBox {
+        width: 70%;
+        height: 70%;
+        font-size: 1.2em;
+    }
+}
+
+
+@media (max-width: 500px) {
+    body {
+        font-size: 16px;
+    }
+    .curtainLeft,
+    .curtainRight {
+        display: none;
+    }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mE-Cards</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<!-- FONTS FROM WHICH USERS CAN SELECT FOR THEIR CARDS:  -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Black+And+White+Picture|Black+Han+Sans|Crimson+Text|Cute+Font|Dancing+Script|Do+Hyeon|Dokdo|Dosis|Gaegu|Gamja+Flower|Gugi|Hi+Melody|Inconsolata|Indie+Flower|Jua|Lato|Libre+Baskerville|Lobster|Merriweather|Montserrat|Pacifico|Playfair+Display|Poppins|Raleway|Roboto|Shadows+Into+Light|Tajawal|Ubuntu" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Exo+2|Montserrat|Quicksand" rel="stylesheet">
+
+<!-- The following two font packages are from Venue e-Valuator and ultimately can be removed -->
+<!--
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Montserrat|Open+Sans:600|Quicksand|Raleway|Roboto:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Arimo|Dhurjati|Fira+Mono|Nova+Mono|Overpass+Mono:300,400|PT+Sans" rel="stylesheet">
+-->
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="assets/grid.css" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <main role="main">
+        <div id="reactHeader"></div>
+<!--
+        <header role="banner" id="pageTop">
+            <h1>mE-Cards</h1>
+            <p class="headerSubtitle">Your quick e-card generator.</p>
+        </header>
+-->
+        <section class="intro">
+            <p>This site allows you to create personalized e-cards, each with their own unique URL.  Create a header, a greeting, and/or a footer, pick a background image, and adjust the fonts and borders to your liking.  Once you are satisfied with your e-card, copy its unique URL and send it on to your loved one.</p>
+        </section>
+
+        <form id="login">
+            <div class="row">
+                <div class="col-6 loginLabel">Username:</div>
+                <div class="col-6 loginInput"><input name="signinUserName" placeholder="testuser" autocomplete="off" value="testuser"></div>
+            </div>
+            <div class="row">
+                <div class="col-6 loginLabel">Password:</div>
+                <div class="col-6 loginInput"><input name="signinPassword" placeholder="testpassword" autocomplete="off" value="testpassword"></div>
+            </div>
+            <div class="row loginButtons">
+                <button id="loginClicked" type="submit">Submit</button><button id="newUserButton">New User?</button>
+            </div>
+        </form>
+
+        <div class="newUser invisible">
+            <div class="newuserBox">
+                <h2>Create New User</h2>
+                <form id="newUser">
+                    <div class="row">
+                        <div class="col-6 loginLabel">Username:</div>
+                        <div class="col-6 loginInput"><input name="userName" autocomplete="off"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 loginLabel">Password:</div>
+                        <div class="col-6 loginInput"><input name="password" autocomplete="off"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 loginLabel">Confirm Password:</div>
+                        <div class="col-6 loginInput"><input name="passwordConfirm" autocomplete="off"></div>
+                    </div>
+                    <div class="row">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+                <button id="cancelNewUser">Cancel</button>
+            </div>
+        </div>
+
+        <div class="prevCards invisible">
+            <div class="prevCardsBox">
+                <h2>Your previous cards:</h2>
+                <div id="prevCards">
+                </div>
+            </div>
+            <button id="oldUserNewCard">New Card</button>
+        </div>
+
+        <div id="myAlert" class="invisible">
+            <div class="myAlertBox">
+                <div class="putAlertHere"></div>
+            </div>
+        </div>
+
+        <div class="userCard invisible">
+            <form>
+<!--                <div class="tooltip"><input name="photoQuery" id="photoQuery" placeholder="Image search term"><span class="tooltiptext toptip">Enter search term for background photo</span></div>-->
+                <input name="photoQuery" id="photoQuery" placeholder="Image search term">
+                <button type="submit" id="querySubmit">Submit</button><br>
+                <button id="prevPhoto" class="invisible">Prev. Image</button>
+                <button id="nextPhoto" class="invisible">Next Image</button>
+            </form>
+
+            <div class="row">
+<!--                <h2 class = "title">Heading:</h2>-->
+               <div class="col-3">
+                    <button class="styleButton tooltip leftButton" id="prevTitleFont"><span class="tooltiptext toptip">Prev title font</span><span class="oneFont">a</span><span class="twoFont">a</span><span class="threeFont">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextTitleFont"><span class="tooltiptext toptip">Next title font</span><span class="threeFont">a</span><span class="twoFont">a</span><span class="oneFont">a</span></button>
+                    <button class="styleButton tooltip leftButton" id="prevTitleColor"><span class="tooltiptext toptip">Prev title color</span><span class="oneColor">a</span><span class="twoColor">a</span><span class="threeColor">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextTitleColor"><span class="tooltiptext toptip">Next title color</span><span class="threeColor">a</span><span class="twoColor">a</span><span class="oneColor">a</span></button>
+                </div>
+                <div class="col-6">
+                    <input type="text" name="titleText" id="titleText" placeholder="Header text" onkeyup="createCard.changeHeader()"/>
+                </div>
+                <div class="col-3">
+                    <button class="styleButton tooltip leftButton" id="smallerTitle"><span class="tooltiptext toptip">Smaller title</span>a<span class="mediumFont">a</span><span class="smallFont">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="largerTitle"><span class="tooltiptext toptip">Larger title</span><span class="smallFont">a</span><span class="mediumFont">a</span>a</button>
+                    <button class="styleButton tooltip leftButton" id="prevHeaderStyle"><span class="tooltiptext toptip">Prev drop shadow</span>a<span class="oneStyle">a</span><span class="twoStyle">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextHeaderStyle"><span class="tooltiptext toptip">Next drop shadow</span><span class="twoStyle">a</span><span class="oneStyle">a</span>a</button>
+                </div>
+            </div>
+
+            <div class="row middleArea">
+                <div id="cardBox" class="col-8">
+                    <div class="cardHeader"><span id="cardHeader">Header (optional)</span></div>
+                    <img id="photo" src="assets/images/blackbackground.jpg">
+                    <div class="cardBody"><span  id="cardBody">Body text (optional).  Header, body, & footer are all optional.  If you want the header, body, and/or footer to be blank, place a space in the corresponding text box.</span></div>
+                    <div class="cardFooter"><span id="cardFooter">Footer (optional)</span></div>
+                    <div id="photoCreds" class="invisible"></div>
+                </div>
+
+                <div class = "col-4 bodyColumn">
+<!--                    <h2 class="body">Card Body:</h2>-->
+                    <button class="styleButton tooltip leftButton" id="prevBodyFont"><span class="tooltiptext toptip">Prev body font</span><span class="oneFont">a</span><span class="twoFont">a</span><span class="threeFont">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextBodyFont"><span class="tooltiptext toptip">Next body font</span><span class="threeFont">a</span><span class="twoFont">a</span><span class="oneFont">a</span></button>
+                    <button class="styleButton tooltip leftButton" id="prevBodyColor"><span class="tooltiptext toptip">Prev body color</span><span class="oneColor">a</span><span class="twoColor">a</span><span class="threeColor">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextBodyColor"><span class="tooltiptext toptip">Next body color</span><span class="threeColor">a</span><span class="twoColor">a</span><span class="oneColor">a</span></button>
+                    <textarea maxlength="400" name="bodyText" id="bodyText" onkeyup="createCard.changeBody()" placeholder="Type your body text"></textarea>
+                    <button class="styleButton tooltip leftButton" id="smallerBody"><span class="tooltiptext bottomtip">Smaller body</span>a<span class="mediumFont">a</span><span class="smallFont">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="largerBody"><span class="tooltiptext bottomtip">Larger body</span><span class="smallFont">a</span><span class="mediumFont">a</span>a</button>
+                    <button class="styleButton tooltip leftButton" id="prevBodyStyle"><span class="tooltiptext bottomtip">Prev drop shadow</span>a<span class="oneStyle">a</span><span class="twoStyle">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextBodyStyle"><span class="tooltiptext bottomtip">Next drop shadow</span><span class="twoStyle">a</span><span class="oneStyle">a</span>a</button>
+                    <hr>
+                    <div id="borderButtons">
+                        <button class="styleButton borderButton tooltip leftButton" id="prevBorderStyle"><span class="tooltiptext toptip">Prev border style</span>┐╗</button>
+                        <button class="styleButton borderButton tooltip rightButton" id="nextBorderStyle"><span class="tooltiptext toptip">Next border style</span>╗┐</button>
+                        <button class="styleButton borderButton tooltip leftButton" id="prevBorderColor"><span class="tooltiptext toptip">Prev border color</span><span class="oneColor">┐</span><span class="twoColor">┐</span><span class="threeColor">┐</span></button>
+                        <button class="styleButton borderButton tooltip rightButton" id="nextBorderColor"><span class="tooltiptext toptip">Next border color</span><span class="threeColor">┐</span><span class="twoColor">┐</span><span class="oneColor">┐</span></button>
+                        <button class="styleButton tooltip leftButton" id="smallerBorder"><span class="tooltiptext toptip">Narrower border</span>▌│</button>
+                        <button class="styleButton tooltip rightButton" id="largerBorder"><span class="tooltiptext toptip">Wider border</span>│▌</button>
+                        <br>
+                        <button class="styleButton tooltip leftButton" id="prevBackground"><span class="tooltiptext bottomtip">Prev background color</span><span class="twoColor">█</span><span class="oneColor">█</span></button>
+                        <button class="styleButton tooltip rightButton" id="nextBackground"><span class="tooltiptext bottomtip">Next background color</span><span class="oneColor">█</span><span class="twoColor">█</span></button>
+                        <br>
+                        <button id="preview" class="tooltip goButton"><span class="tooltiptext toptip">Preview the card in the full browser window</span><span class="tooltiptext bottomtip">Note - display size may affect layout</span>PREVIEW CARD</button><button id="saveChanges" class="goButton">SAVE CARD</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+<!--            <h2 class="footer">Footer:</h2>-->
+               <div class = "col-3">
+                    <button class="styleButton tooltip leftButton" id="prevFooterFont"><span class="tooltiptext toptip">Prev footer font</span><span class="oneFont">a</span><span class="twoFont">a</span><span class="threeFont">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextFooterFont"><span class="tooltiptext toptip">Next footer font</span><span class="threeFont">a</span><span class="twoFont">a</span><span class="oneFont">a</span></button>
+                    <button class="styleButton tooltip leftButton" id="prevFooterColor"><span class="tooltiptext toptip">Prev footer color</span><span class="oneColor">a</span><span class="twoColor">a</span><span class="threeColor">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextFooterColor"><span class="tooltiptext toptip">Next footer color</span><span class="threeColor">a</span><span class="twoColor">a</span><span class="oneColor">a</span></button>
+                </div>
+                <div class="col-6">
+                    <input type="text" name="footertext" id="footertext" onkeyup="createCard.changeFooter()" placeholder="Footer text" />
+                </div>
+                <div class = "col-3">
+                    <button class="styleButton tooltip leftButton" id="smallerFooter"><span class="tooltiptext toptip">Smaller footer</span>a<span class="mediumFont">a</span><span class="smallFont">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="largerFooter"><span class="tooltiptext toptip">Larger footer</span><span class="smallFont">a</span><span class="mediumFont">a</span>a</button>
+                    <button class="styleButton tooltip leftButton" id="prevFooterStyle"><span class="tooltiptext toptip">Prev drop shadow</span>a<span class="oneStyle">a</span><span class="twoStyle">a</span></button>
+                    <button class="styleButton tooltip rightButton" id="nextFooterStyle"><span class="tooltiptext toptip">Next drop shadow</span><span class="twoStyle">a</span><span class="oneStyle">a</span>a</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="cardPickup" name="cardPickup" class="cardPickup invisible"></div>
+
+        <div id="otherOptions" class="otherOptions row"><button id="allCards" class="tooltip invisible"><span class="tooltiptext toptip">View all saved cards</span>All Cards</button><button id="newCard" class="tooltip invisible"><span class="tooltiptext toptip">Start from scratch</span>New Card</button></div>
+
+<!--
+            <form>
+                Search term for background clipart:<input name="clipQuery"  id="clipQuery" placeholder="kittens">
+                <button type="submit" id="clipSubmit">Submit</button>
+            </form>
+-->
+
+    </main>
+    <div id="previewParent" class="invisible">
+        <div id="cardPreview">
+            <div id="previewHeader"></div>
+            <p id="previewBody" class="previewBody"></p>
+            <p id="previewFooter"></p>
+            <p id="previewCreds"></p>
+            <button id="closePreview" class="closePreview">Close Preview</button>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="left">© David Sundland</div>
+        <div class="right"><a href="https://github.com/DavidSundland" target="_blank"> <i class="fab fa-github"></i> </a><a href="https://www.linkedin.com/in/david-sundland" target="_blank"> <i class="fab fa-linkedin"></i> </a><a href="mailto:dsundland@gmail.com"> <i class="far fa-envelope"></i> </a></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js "></script>
+    <script src="assets/client.js "></script>
+    <script src="index.js "></script>
+</body>
+
+</html>
