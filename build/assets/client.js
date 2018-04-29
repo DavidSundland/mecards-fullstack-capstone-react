@@ -531,7 +531,7 @@ function setInitial() {
     $("#cardHeader").css("font-size", createCard.titleFontSize + "vw");
     $("#cardBody").css("font-size", createCard.bodyFontSize + "vw");
     $("#cardFooter").css("font-size", createCard.footerFontSize + "vw");
-    console.log(createCard.titleStyleNumber);
+//    console.log(createCard.titleStyleNumber);
     $("#cardHeader").css("text-shadow", TEXTSTYLES[createCard.titleStyleNumber][1]);
     $("#cardHeader").css("background-color", TEXTSTYLES[createCard.titleStyleNumber][0]);
     $("#cardBody").css("text-shadow", TEXTSTYLES[createCard.bodyStyleNumber][1]);
@@ -881,7 +881,8 @@ function getCardList() {
 
 // Code to log user in:
 
-$('#login').on('click', '#loginClicked', function (event) {
+$(document).on('click', '#loginClicked', function (event) {
+//    alert("loginClicked clicked");
     event.preventDefault();
     // AJAX call to validate login info and sign user in
     const inputUname = $('input[name="signinUserName"]').val();

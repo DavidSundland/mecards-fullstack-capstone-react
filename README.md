@@ -28,7 +28,7 @@ As a user, I want an overview about each venue that interests me so that I can d
 * Users can delete or edit reviews after they have been submitted.
 
 ## Working Prototye
-A live example of the project can be found at: https://mecards-fullstack-capstone.herokuapp.com.
+A live example of the project wih Node can be found at: https://mecards-fullstack-capstone.herokuapp.com and with React https://davidsundland.github.io/mecards-fullstack-capstone-react/build
 
 
 Screenshot of landing page:
