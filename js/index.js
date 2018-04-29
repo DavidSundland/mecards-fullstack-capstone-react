@@ -9,6 +9,7 @@ import Header from '../js/components/header';
 import Intro from '../js/components/intro';
 import Login from '../js/components/login';
 import Footer from '../js/components/footer';
+import NewUser from '../js/components/newuser';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,4 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     return ReactDOM.render(<Footer />, document.getElementById('reactFooter'));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    return ReactDOM.render(<NewUser />, document.getElementById('reactNewUser'));
 });

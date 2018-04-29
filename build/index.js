@@ -72,6 +72,10 @@
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
+	var _newuser = __webpack_require__(550);
+	
+	var _newuser2 = _interopRequireDefault(_newuser);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -92,6 +96,10 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	    return _reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('reactFooter'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	    return _reactDom2.default.render(_react2.default.createElement(_newuser2.default, null), document.getElementById('reactNewUser'));
 	});
 
 /***/ }),
@@ -67024,6 +67032,115 @@
 	                ' ',
 	                _react2.default.createElement('i', { className: 'far fa-envelope' }),
 	                ' '
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = NewUser;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function NewUser(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        { className: 'newUser invisible' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'newuserBox' },
+	            _react2.default.createElement(
+	                'h2',
+	                null,
+	                'Create New User'
+	            ),
+	            _react2.default.createElement(
+	                'form',
+	                { id: 'newUser' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'row' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col-6 loginLabel' },
+	                        'Username:'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col-6 loginInput' },
+	                        _react2.default.createElement('input', { name: 'userName', autoComplete: 'off' })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'row' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col-6 loginLabel' },
+	                        'Password:'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col-6 loginInput' },
+	                        _react2.default.createElement('input', { name: 'password', autoComplete: 'off' })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'row' },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col-6 loginLabel' },
+	                        'Confirm Password:'
+	                    ),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'col-6 loginInput' },
+	                        _react2.default.createElement('input', { name: 'passwordConfirm', autoComplete: 'off' })
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'row' },
+	                    _react2.default.createElement(
+	                        'button',
+	                        { type: 'submit', id: 'newUserSubmit' },
+	                        'Submit'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'button',
+	                { id: 'cancelNewUser' },
+	                'Cancel'
 	            )
 	        )
 	    );

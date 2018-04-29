@@ -802,7 +802,9 @@ function copyThis(clickId, copyId) {
 }
 // Code to create new user:
 
-$('#newUser').on('submit', function (event) {
+//$('#newUser').on('submit', function (event) {
+$(document).on('click', '#newUserSubmit', function (event) {
+    alert("it's about fucking time");
     event.preventDefault();
     const uname = $('input[name="userName"]').val();
     const pw = $('input[name="password"]').val();
