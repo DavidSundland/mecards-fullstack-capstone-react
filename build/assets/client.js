@@ -80,32 +80,32 @@ let createCard = {
     cardId: "",
 
     changeHeader: function() {
-        this.titleText = $("#titleText").val();
-        if (this.titleText==="") {  // if user deletes text, put the instructions back on screen
+        createCard.titleText = $("#titleText").val();
+        if (createCard.titleText==="") {  // if user deletes text, put the instructions back on screen
             $("#cardHeader").text(DEFAULTHEADER);
         }
         else {
-            $("#cardHeader").text(this.titleText);
+            $("#cardHeader").text(createCard.titleText);
         }
     },
 
     changeBody: function() {
-        this.bodyText = $("#bodyText").val();
-        if (this.bodyText==="") {
+        createCard.bodyText = $("#bodyText").val();
+        if (createCard.bodyText==="") {
             $("#cardBody").text(DEFAULTBODY);
         }
         else {
-            $("#cardBody").text(this.bodyText);
+            $("#cardBody").text(createCard.bodyText);
         }
     },
 
     changeFooter: function() {
-        this.footerText = $("#footertext").val();
-        if (this.footerText==="") {
+        createCard.footerText = $("#footertext").val();
+        if (createCard.footerText==="") {
             $("#cardFooter").text(DEFAULTFOOTER);
         }
         else {
-            $("#cardFooter").text(this.footerText);
+            $("#cardFooter").text(createCard.footerText);
         }
     },
     headerFont: function() {
@@ -804,7 +804,6 @@ function copyThis(clickId, copyId) {
 
 //$('#newUser').on('submit', function (event) {
 $(document).on('click', '#newUserSubmit', function (event) {
-    alert("it's about fucking time");
     event.preventDefault();
     const uname = $('input[name="userName"]').val();
     const pw = $('input[name="password"]').val();
@@ -1106,7 +1105,7 @@ $(document).ready(function () {
         $(document).on('click', '#saveChanges', saveCard);
         $(document).on('click', '#newCard', startAnew);
         $(document).on('click', '#oldUserNewCard', addCard);
-        $(document).on('click', '#allCards', getCardList);
+        $(document).on('click', '#allCards', function() {if (confirm("Did you save any changes that you wanted to keep?")) {getCardList()}});
         $(createCard.getImages);
         $(createCard.headerFont);
         $(createCard.bodyFont);

@@ -76,6 +76,18 @@
 	
 	var _newuser2 = _interopRequireDefault(_newuser);
 	
+	var _prevcards = __webpack_require__(551);
+	
+	var _prevcards2 = _interopRequireDefault(_prevcards);
+	
+	var _myalert = __webpack_require__(552);
+	
+	var _myalert2 = _interopRequireDefault(_myalert);
+	
+	var _usercard = __webpack_require__(553);
+	
+	var _usercard2 = _interopRequireDefault(_usercard);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -100,6 +112,18 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	    return _reactDom2.default.render(_react2.default.createElement(_newuser2.default, null), document.getElementById('reactNewUser'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	    return _reactDom2.default.render(_react2.default.createElement(_prevcards2.default, null), document.getElementById('reactPrevCards'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	    return _reactDom2.default.render(_react2.default.createElement(_myalert2.default, null), document.getElementById('reactMyAlert'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	    return _reactDom2.default.render(_react2.default.createElement(_usercard2.default, null), document.getElementById('reactUserCard'));
 	});
 
 /***/ }),
@@ -67141,6 +67165,924 @@
 	                'button',
 	                { id: 'cancelNewUser' },
 	                'Cancel'
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 551 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = PrevCards;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function PrevCards(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        { className: 'prevCards invisible' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'prevCardsBox' },
+	            _react2.default.createElement(
+	                'h2',
+	                null,
+	                'Your previous cards:'
+	            ),
+	            _react2.default.createElement('div', { id: 'prevCards' })
+	        ),
+	        _react2.default.createElement(
+	            'button',
+	            { id: 'oldUserNewCard' },
+	            'New Card'
+	        )
+	    );
+	}
+
+/***/ }),
+/* 552 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = MyAlert;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function MyAlert(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        { id: 'myAlert', className: 'invisible' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'myAlertBox' },
+	            _react2.default.createElement('div', { className: 'putAlertHere' })
+	        )
+	    );
+	}
+
+/***/ }),
+/* 553 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = UserCard;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function UserCard(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        { className: 'userCard invisible' },
+	        _react2.default.createElement(
+	            'form',
+	            null,
+	            _react2.default.createElement('input', { name: 'photoQuery', id: 'photoQuery', placeholder: 'Image search term' }),
+	            _react2.default.createElement(
+	                'button',
+	                { type: 'submit', id: 'querySubmit' },
+	                'Submit'
+	            ),
+	            _react2.default.createElement('br', null),
+	            _react2.default.createElement(
+	                'button',
+	                { id: 'prevPhoto', className: 'invisible' },
+	                'Prev. Image'
+	            ),
+	            _react2.default.createElement(
+	                'button',
+	                { id: 'nextPhoto', className: 'invisible' },
+	                'Next Image'
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'col-3' },
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevTitleFont' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Prev title font'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextTitleFont' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Next title font'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevTitleColor' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Prev title color'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeColor' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextTitleColor' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Next title color'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneColor' },
+	                        'a'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'col-6' },
+	                _react2.default.createElement('input', { type: 'text', name: 'titleText', id: 'titleText', placeholder: 'Header text', onKeyUp: createCard.changeHeader })
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'col-3' },
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'smallerTitle' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Smaller title'
+	                    ),
+	                    'a',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'mediumFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'smallFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'largerTitle' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Larger title'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'smallFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'mediumFont' },
+	                        'a'
+	                    ),
+	                    'a'
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevHeaderStyle' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Prev drop shadow'
+	                    ),
+	                    'a',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneStyle' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoStyle' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextHeaderStyle' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Next drop shadow'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoStyle' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneStyle' },
+	                        'a'
+	                    ),
+	                    'a'
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'row middleArea' },
+	            _react2.default.createElement(
+	                'div',
+	                { id: 'cardBox', className: 'col-8' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'cardHeader' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { id: 'cardHeader' },
+	                        'Header (optional)'
+	                    )
+	                ),
+	                _react2.default.createElement('img', { id: 'photo', src: 'assets/images/blackbackground.jpg' }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'cardBody' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { id: 'cardBody' },
+	                        'Body text (optional).  Header, body, & footer are all optional.  If you want the header, body, and/or footer to be blank, place a space in the corresponding text box.'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'cardFooter' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { id: 'cardFooter' },
+	                        'Footer (optional)'
+	                    )
+	                ),
+	                _react2.default.createElement('div', { id: 'photoCreds', className: 'invisible' })
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'col-4 bodyColumn' },
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevBodyFont' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Prev body font'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextBodyFont' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Next body font'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevBodyColor' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Prev body color'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeColor' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextBodyColor' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Next body color'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneColor' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement('textarea', { maxLength: '400', name: 'bodyText', id: 'bodyText', onKeyUp: createCard.changeBody, placeholder: 'Type your body text' }),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'smallerBody' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext bottomtip' },
+	                        'Smaller body'
+	                    ),
+	                    'a',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'mediumFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'smallFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'largerBody' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext bottomtip' },
+	                        'Larger body'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'smallFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'mediumFont' },
+	                        'a'
+	                    ),
+	                    'a'
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevBodyStyle' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext bottomtip' },
+	                        'Prev drop shadow'
+	                    ),
+	                    'a',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneStyle' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoStyle' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextBodyStyle' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext bottomtip' },
+	                        'Next drop shadow'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoStyle' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneStyle' },
+	                        'a'
+	                    ),
+	                    'a'
+	                ),
+	                _react2.default.createElement('hr', null),
+	                _react2.default.createElement(
+	                    'div',
+	                    { id: 'borderButtons' },
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'styleButton borderButton tooltip leftButton', id: 'prevBorderStyle' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext toptip' },
+	                            'Prev border style'
+	                        ),
+	                        '\u2510\u2557'
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'styleButton borderButton tooltip rightButton', id: 'nextBorderStyle' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext toptip' },
+	                            'Next border style'
+	                        ),
+	                        '\u2557\u2510'
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'styleButton borderButton tooltip leftButton', id: 'prevBorderColor' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext toptip' },
+	                            'Prev border color'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'oneColor' },
+	                            '\u2510'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'twoColor' },
+	                            '\u2510'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'threeColor' },
+	                            '\u2510'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'styleButton borderButton tooltip rightButton', id: 'nextBorderColor' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext toptip' },
+	                            'Next border color'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'threeColor' },
+	                            '\u2510'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'twoColor' },
+	                            '\u2510'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'oneColor' },
+	                            '\u2510'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'styleButton tooltip leftButton', id: 'smallerBorder' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext toptip' },
+	                            'Narrower border'
+	                        ),
+	                        '\u258C\u2502'
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'styleButton tooltip rightButton', id: 'largerBorder' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext toptip' },
+	                            'Wider border'
+	                        ),
+	                        '\u2502\u258C'
+	                    ),
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'styleButton tooltip leftButton', id: 'prevBackground' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext bottomtip' },
+	                            'Prev background color'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'twoColor' },
+	                            '\u2588'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'oneColor' },
+	                            '\u2588'
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { className: 'styleButton tooltip rightButton', id: 'nextBackground' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext bottomtip' },
+	                            'Next background color'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'oneColor' },
+	                            '\u2588'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'twoColor' },
+	                            '\u2588'
+	                        )
+	                    ),
+	                    _react2.default.createElement('br', null),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { id: 'preview', className: 'tooltip goButton' },
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext toptip' },
+	                            'Preview the card in the full browser window'
+	                        ),
+	                        _react2.default.createElement(
+	                            'span',
+	                            { className: 'tooltiptext bottomtip' },
+	                            'Note - display size may affect layout'
+	                        ),
+	                        'PREVIEW CARD'
+	                    ),
+	                    _react2.default.createElement(
+	                        'button',
+	                        { id: 'saveChanges', className: 'goButton' },
+	                        'SAVE CARD'
+	                    )
+	                )
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'row' },
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'col-3' },
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevFooterFont' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Prev footer font'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextFooterFont' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Next footer font'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevFooterColor' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Prev footer color'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeColor' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextFooterColor' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Next footer color'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'threeColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoColor' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneColor' },
+	                        'a'
+	                    )
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'col-6' },
+	                _react2.default.createElement('input', { type: 'text', name: 'footertext', id: 'footertext', onKeyUp: createCard.changeFooter, placeholder: 'Footer text' })
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { className: 'col-3' },
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'smallerFooter' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Smaller footer'
+	                    ),
+	                    'a',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'mediumFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'smallFont' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'largerFooter' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Larger footer'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'smallFont' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'mediumFont' },
+	                        'a'
+	                    ),
+	                    'a'
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip leftButton', id: 'prevFooterStyle' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Prev drop shadow'
+	                    ),
+	                    'a',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneStyle' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoStyle' },
+	                        'a'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'button',
+	                    { className: 'styleButton tooltip rightButton', id: 'nextFooterStyle' },
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'tooltiptext toptip' },
+	                        'Next drop shadow'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'twoStyle' },
+	                        'a'
+	                    ),
+	                    _react2.default.createElement(
+	                        'span',
+	                        { className: 'oneStyle' },
+	                        'a'
+	                    ),
+	                    'a'
+	                )
 	            )
 	        )
 	    );
