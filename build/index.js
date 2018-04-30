@@ -88,6 +88,10 @@
 	
 	var _usercard2 = _interopRequireDefault(_usercard);
 	
+	var _previewparent = __webpack_require__(554);
+	
+	var _previewparent2 = _interopRequireDefault(_previewparent);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var render = _reactDom2.default.render;
@@ -124,6 +128,10 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	    return _reactDom2.default.render(_react2.default.createElement(_usercard2.default, null), document.getElementById('reactUserCard'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	    return _reactDom2.default.render(_react2.default.createElement(_previewparent2.default, null), document.getElementById('reactPreviewParent'));
 	});
 
 /***/ }),
@@ -68083,6 +68091,59 @@
 	                    ),
 	                    'a'
 	                )
+	            )
+	        )
+	    );
+	}
+
+/***/ }),
+/* 554 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = PreviewParent;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function PreviewParent(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        { id: 'previewParent', className: 'invisible' },
+	        _react2.default.createElement(
+	            'div',
+	            { id: 'cardPreview' },
+	            _react2.default.createElement('div', { id: 'previewHeader' }),
+	            _react2.default.createElement('p', { id: 'previewBody', className: 'previewBody' }),
+	            _react2.default.createElement('p', { id: 'previewFooter' }),
+	            _react2.default.createElement('p', { id: 'previewCreds' }),
+	            _react2.default.createElement(
+	                'button',
+	                { id: 'closePreview', className: 'closePreview' },
+	                'Close Preview'
 	            )
 	        )
 	    );

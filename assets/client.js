@@ -23,7 +23,7 @@ function adjustCardHeight(photoWidth, photoHeight) {
         DISPLAYHEIGHT = window.innerWidth*.547;
     }
     // if width not passed, check to ensure that photoList has been created, card is active and has width
-    console.log(photoWidth, createCard.photoList[createCard.imageNumber]);
+//    console.log(photoWidth, createCard.photoList[createCard.imageNumber]);
     if ((!photoWidth) && (createCard.photoList[createCard.imageNumber] !== undefined)) {
         photoWidth = createCard.photoList[createCard.imageNumber].width;
         photoHeight = createCard.photoList[createCard.imageNumber].height;
@@ -76,7 +76,7 @@ let createCard = {
     borderSize: 10,
     backgroundNumber: 1,
     imageNumber: 0,
-    photoList: [{photoLink: "images/blackbackground.jpg", photogName: "", photogLink: "", width: 885, height: 583}],
+    photoList: [{photoLink: "assets/images/blackbackground.jpg", photogName: "", photogLink: "", width: 885, height: 583}],
     cardId: "",
 
     changeHeader: function() {
@@ -576,7 +576,7 @@ function startAnew(event) {
         createCard.borderSize = 10;
         createCard.backgroundNumber = 1;
         createCard.imageNumber = 0;
-        createCard.photoList = [];
+        createCard.photoList = [{photoLink: "assets/images/blackbackground.jpg", photogName: "", photogLink: "", width: 885, height: 583}];
         createCard.cardId = "";
         $("#cardHeader").text(DEFAULTHEADER); // clear existing values from preview
         $("#cardBody").text(DEFAULTBODY);
@@ -964,7 +964,7 @@ $(document).on('click', '.userCards', function(event) {
         $('.userCard').removeClass('invisible');
         $('.newUser').addClass('invisible');
         $('.prevCards').addClass('invisible');
-        console.log("photoList:", createCard.photoList);
+//        console.log("photoList:", createCard.photoList);
         $("#titleText").val(createCard.titleText);
         $("#cardHeader").text(createCard.titleText);
         $("#bodyText").val(createCard.bodyText);
@@ -1019,7 +1019,7 @@ function displayCard() {
 //        $("#otherOptions").removeClass("invisible");
         $("#allCards").removeClass("invisible");
         $("#newCard").removeClass("invisible");
-        console.log("photoList:", createCard.photoList);
+//        console.log("photoList:", createCard.photoList);
         $("#titleText").val(createCard.titleText);
         $("#cardHeader").text(createCard.titleText);
         $("#bodyText").val(createCard.bodyText);
@@ -1129,8 +1129,8 @@ $(document).ready(function () {
 
 function displaySavedCard(cardId) {
     $.getJSON('https://mecards-fullstack-capstone.herokuapp.com/showsave/' + cardId, function (res) {
-        console.log("card info:", res);
-        console.log(createCard.photoList);
+//        console.log("card info:", res);
+//        console.log(createCard.photoList);
         width = Number(res.results.width);
         height = Number(res.results.height);
         console.log(createCard);
