@@ -13,6 +13,7 @@ import NewUser from '../js/components/newuser';
 import PrevCards from '../js/components/prevcards';
 import MyAlert from '../js/components/myalert';
 import UserCard from '../js/components/usercard';
+import OtherOptions from '../js/components/otheroptions';
 import PreviewParent from '../js/components/previewparent';
 
 
@@ -46,6 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     return ReactDOM.render(<UserCard />, document.getElementById('reactUserCard'));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    return ReactDOM.render(<OtherOptions />, document.getElementById('reactOtherOptions'));
 });
 
 document.addEventListener('DOMContentLoaded', () => {

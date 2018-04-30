@@ -88,7 +88,11 @@
 	
 	var _usercard2 = _interopRequireDefault(_usercard);
 	
-	var _previewparent = __webpack_require__(554);
+	var _otheroptions = __webpack_require__(554);
+	
+	var _otheroptions2 = _interopRequireDefault(_otheroptions);
+	
+	var _previewparent = __webpack_require__(555);
 	
 	var _previewparent2 = _interopRequireDefault(_previewparent);
 	
@@ -128,6 +132,10 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	    return _reactDom2.default.render(_react2.default.createElement(_usercard2.default, null), document.getElementById('reactUserCard'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+	    return _reactDom2.default.render(_react2.default.createElement(_otheroptions2.default, null), document.getElementById('reactOtherOptions'));
 	});
 	
 	document.addEventListener('DOMContentLoaded', function () {
@@ -68098,6 +68106,66 @@
 
 /***/ }),
 /* 554 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.default = OtherOptions;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function OtherOptions(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        { id: 'otherOptions', className: 'otherOptions row' },
+	        _react2.default.createElement(
+	            'button',
+	            { id: 'allCards', className: 'tooltip invisible' },
+	            _react2.default.createElement(
+	                'span',
+	                { className: 'tooltiptext toptip' },
+	                'View all saved cards'
+	            ),
+	            'All Cards'
+	        ),
+	        _react2.default.createElement(
+	            'button',
+	            { id: 'newCard', className: 'tooltip invisible' },
+	            _react2.default.createElement(
+	                'span',
+	                { className: 'tooltiptext toptip' },
+	                'Start from scratch'
+	            ),
+	            'New Card'
+	        )
+	    );
+	}
+
+/***/ }),
+/* 555 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';

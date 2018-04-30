@@ -840,6 +840,8 @@ $(document).on('click', '#newUserSubmit', function (event) {
             $('input[name="userName"]').val(""); // clear the input fields
             $('input[name="password"]').val("");
             $('input[name="passwordConfirm"]').val("");
+            $('input[name="signinUserName"]').val("");
+            $('input[name="signinPassword"]').val("");
             $('.newUser').addClass('invisible');
             $('.login').removeClass('invisible');
         })
@@ -1031,16 +1033,18 @@ function displayCard() {
 }
 
 function createNewUser(event) {
-    console.log("hi from createNewUser");
+//    console.log("hi from createNewUser");
     event.preventDefault(); // otherwise page reloads when this function starts
     $('.login').addClass('invisible');
     $('.newUser').removeClass('invisible');
 }
 
-$('.newUser').on('click', '#cancelNewUser', function () {
+$(document).on('click', '#cancelNewUser', function () {
     $('input[name="userName"]').val(""); // clear the input fields
     $('input[name="password"]').val("");
     $('input[name="passwordConfirm"]').val("");
+    $('input[name="signinUserName"]').val("");
+    $('input[name="signinPassword"]').val("");
     $('.newUser').addClass('invisible');
     $('.jsHide').removeClass("invisible");
 });
