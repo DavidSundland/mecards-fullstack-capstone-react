@@ -40,7 +40,7 @@ export default function UserCard(props) {
         <div className="row middleArea">
             <div id="cardBox" className="col-8">
                 <div className="cardHeader"><span id="cardHeader">Header (optional)</span></div>
-                <img id="photo" src="assets/images/blackbackground.jpg" />
+                <img id="photo" src="https://mecards-fullstack-capstone.herokuapp.com/images/blackbackground.jpg" />
                 <div className="cardBody"><span  id="cardBody">Body text (optional).  Header, body, & footer are all optional.  If you want the header, body, and/or footer to be blank, place a space in the corresponding text box.</span></div>
                 <div className="cardFooter"><span id="cardFooter">Footer (optional)</span></div>
                 <div id="photoCreds" className="invisible"></div>

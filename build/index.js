@@ -67552,7 +67552,7 @@
 	                        'Header (optional)'
 	                    )
 	                ),
-	                _react2.default.createElement('img', { id: 'photo', src: 'assets/images/blackbackground.jpg' }),
+	                _react2.default.createElement('img', { id: 'photo', src: 'https://mecards-fullstack-capstone.herokuapp.com/images/blackbackground.jpg' }),
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'cardBody' },

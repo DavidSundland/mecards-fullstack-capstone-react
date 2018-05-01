@@ -1,56 +1,61 @@
 # mE-Card Capstone
-Thinkful Node Capstone
+Thinkful React Capstone
 
 ## Background
 
 I built this app because I often buy gifts on-line, want to be able to send an accompanying e-card, and am unsatisfied with the existing free e-card options.  This app provides a simple interface with which a user can quickly create a custom e-card, and then generate a unique, shareable URL for the final product.
-Live preview available at: ********************
+Live preview available at: https://mecards-fullstack-capstone.herokuapp.com/.
 
 ## User Story
-This app allows users to create e-cards which they can share with others.  The user can create
+This app allows users to create e-cards which they can share with others.  The user can do a keyword search for background photos, add custom header, body, and/or footer text, and easily change each font type, color, size, and style.  Borders can be added to the image, and the background color changed.  Once a card has been completed, the user can save the card and is given a unique URL that can be shared for the final product.
 
-As a user, I want to quickly find overviews about music venues in Washington, DC, so that I can determine which venues might be of interest:
-![main page wireframe](https://github.com/DavidSundland/venue-evaluator-node-capstone/blob/master/public/wireframe.jpg?raw=true)
+As a user, I want to quickly create attractive, custom e-cards that I can share with others:
+![main page wireframe](/public/images/mecard-wireframe-1.jpg)
 
-The main page:
-* User sees a header, a quick description of the site, a list of the venues, a map of the venues, and a box for selecting venue preferences.  The page initially lists all venues, in alphabetic order.
-* User can opt to filter venues by venue type, venue size, or free vs ticketed.  Each time a filter is changed, the list and map update.
-* User can further filter results by entering all or a portion of the venue's name.
-* The results list offers a succinct desription of each venue; user can select any venue in the list for more detailed information.
-* The user can also select venues by clicking on a map pin.
-* When a venue is selected, the venue page opens.
+The landing page:
+* User sees a header, a quick description of the site and a log-in form.
+* Returning users can sign in; new users can click the "new user" button to create a username and password.
 
-As a user, I want an overview about each venue that interests me so that I can determine if I want to visit that venue, and I want to be able to leave reviews so that I can share my experience with others:
-![venue details](https://github.com/DavidSundland/venue-evaluator-node-capstone/blob/master/public/venue_detail_wireframe.jpg?raw=true)
-* Detailed information about an individual venue includes the venue name, a link to the venue's website, a photo, a map, a description, and user reviews (if applicable).
-* Users can leave their own reviews, including providing ratings in pre-selected categories and a text box in which detailed comments can be written.
-* When a new review is submitted, the user is brought back to the venue page, and the review is immediately displayed.
-* Users can delete or edit reviews after they have been submitted.
+The card editor:
+* User can enter a search term for the background photo.
+* Once images are retrieved, "Prev Image" and "Next Image" buttons appear, and user can choose from available photos.
+* The user can type custom text for the header, body, and/or footer.  The text in the preview image changes as a user types in each input box.
+* The user can change the type, color, size, and shadow of each font individually.
+* If the user wants a border, the user can choose from different border styles, colors, and sizes.
+* The user can preview the card in full screen.
+* Once the user is satisfied, the user can save the card and is given a link to a static copy of the card.
+
+The card list:
+* Once a user has 1 or more saved card, they can retrieve cards from the list and edit them.
+* The list is automatically offered for returning users with saved cards; the user can also navigate to that page from the card editor.
+* The card list displays the card's background photo and header, and an "edit" button to retrieve the card.
 
 ## Working Prototye
-A live example of the project wih Node can be found at: https://mecards-fullstack-capstone.herokuapp.com and with React https://davidsundland.github.io/mecards-fullstack-capstone-react/build
+A live example of the project with Node can be found at: https://mecards-fullstack-capstone.herokuapp.com and with React at https://davidsundland.github.io/mecards-fullstack-capstone-react/build.
 
 
 Screenshot of landing page:
 
-![landing page screenshot](https://github.com/DavidSundland/venue-evaluator-node-capstone/blob/master/public/images/landing-page-screenshot.jpg?raw=true)
+![landing page screenshot](/public/images/login-screenshot.jpg)
 
-Screenshot of venue page:
+Screenshot of card editor:
 
-![venue page screenshot](https://github.com/DavidSundland/venue-evaluator-node-capstone/blob/master/public/images/venue-page-screenshot.jpg?raw=true)
+![card editor screenshot](/public/images/card-editor-screenshot.jpg)
 
-Screenshot of page for posting a comment:
+Screenshot of card list:
 
-![comment page screenshot](https://github.com/DavidSundland/venue-evaluator-node-capstone/blob/master/public/images/review-page-screenshot.jpg?raw=true)
+![card list screenshot](/public/images/card-list-screenshot.jpg)
+
+Screenshot of card preview:
+
+![card preview screenshot](/public/images/card-preview-screenshot.jpg)
 
 ## Functionality
 This app's functionality includes:
-* Gets partial or full list of music venues from database.
-* Filters list of music venues based upon user preferences.
-* Filters list of venues based upon user-typed entry.
-* Gets detailed information about each venue upon user request.
-* Allows users to post reviews, with simple click interface for ratings in six categories.
-* Allows users to update or delete reviews.
+* Users can create accounts to save and share cards.
+* The background image, text, fonts, and borders are all customizable.
+* Card previews and final card dimensions dynamically adapt to best fit photos of any proportions to a user's browser width.
+* Each saved card has its own unique URL; the URL is copied to a user's computer clipboard with a click.
 
 ## Technology
 * HTML
@@ -61,11 +66,8 @@ This app's functionality includes:
 * Express
 * Mongo
 
-
 ## Responsive
 App is built to be responsive across mobile, tablet, laptop, and desktop screen resolutions.
-
-
 
 ## Node command lines
 * npm install ==> install all node modules
