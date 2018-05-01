@@ -10,7 +10,7 @@ Live preview available at: https://mecards-fullstack-capstone.herokuapp.com/.
 This app allows users to create e-cards which they can share with others.  The user can do a keyword search for background photos, add custom header, body, and/or footer text, and easily change each font type, color, size, and style.  Borders can be added to the image, and the background color changed.  Once a card has been completed, the user can save the card and is given a unique URL that can be shared for the final product.
 
 As a user, I want to quickly create attractive, custom e-cards that I can share with others:
-![main page wireframe](/public/images/mecard-wireframe-1.jpg)
+![main page wireframe](https://github.com/DavidSundland/mecards-fullstack-capstone/blob/master/public/images/mecard-wireframe-1.jpg)
 
 The landing page:
 * User sees a header, a quick description of the site and a log-in form.
@@ -36,19 +36,19 @@ A live example of the project with Node can be found at: https://mecards-fullsta
 
 Screenshot of landing page:
 
-![landing page screenshot](/public/images/login-screenshot.jpg)
+![landing page screenshot](https://github.com/DavidSundland/mecards-fullstack-capstone/blob/master/public/images/login-screenshot.jpg)
 
 Screenshot of card editor:
 
-![card editor screenshot](/public/images/card-editor-screenshot.jpg)
+![card editor screenshot](https://github.com/DavidSundland/mecards-fullstack-capstone/blob/master/public/images/card-editor-screenshot.jpg)
 
 Screenshot of card list:
 
-![card list screenshot](/public/images/card-list-screenshot.jpg)
+![card list screenshot](https://github.com/DavidSundland/mecards-fullstack-capstone/blob/master/public/images/card-list-screenshot.jpg)
 
 Screenshot of card preview:
 
-![card preview screenshot](/public/images/card-preview-screenshot.jpg)
+![card preview screenshot](https://github.com/DavidSundland/mecards-fullstack-capstone/raw/master/public/images/card-preview-screenshot.jpg)
 
 ## Functionality
 This app's functionality includes:
