@@ -433,7 +433,7 @@ let createCard = {
                 if(createCard.backgroundNumber < 0) {
                     createCard.backgroundNumber = COLORS.length-1;
                 }
-                console.log(createCard.backgroundNumber);
+//                console.log(createCard.backgroundNumber);
                 $("#cardBox").css("background-color", COLORS[createCard.backgroundNumber]);
             }
         );
@@ -443,7 +443,7 @@ let createCard = {
                 if (createCard.backgroundNumber >= COLORS.length) {
                     createCard.backgroundNumber = 0;
                 }
-                console.log(createCard.backgroundNumber);
+//                console.log(createCard.backgroundNumber);
                 $("#cardBox").css("background-color", COLORS[createCard.backgroundNumber]);
             }
         );
@@ -479,7 +479,7 @@ let createCard = {
                     $("#photoQuery").val("");  // clear the previous results
                     for (let x=0; x<res.results.length; x++) {
                         let photogLink = "https://unsplash.com/";  // in case no link for photographer, go to unsplash
-                        console.log("first photog:", res.results[x].user.portfolio_url);
+//                        console.log("first photog:", res.results[x].user.portfolio_url);
                         if (res.results[x].user.portfolio_url != null) {
                             photogLink = res.results[x].user.portfolio_url;
                         }
@@ -610,12 +610,13 @@ function startAnew(event) {
 function viewCard() {
     let previewWidth = Number(createCard.photoList[createCard.imageNumber].width);
     let previewHeight = Number(createCard.photoList[createCard.imageNumber].height);
-    if (previewWidth < 1.1*previewHeight) {
-        $("#previewBody").addClass("portraitPic");
-    }
-    else {
-        $("#previewBody").removeClass("portraitPic");
-    }
+//    portraitPic class no longer necessary for full screen display since photo became background image
+//    if (previewWidth < 1.1*previewHeight) {
+//        $("#previewBody").addClass("portraitPic");
+//    }
+//    else {
+//        $("#previewBody").removeClass("portraitPic");
+//    }
     adjustCardHeight(previewWidth, previewHeight);
     $("#previewParent").removeClass("invisible");
     $("#previewHeader").text(createCard.titleText);
@@ -782,7 +783,7 @@ function copyTextToClipboard(text) {
 
 
 function copyThis(clickId, copyId) {
-    console.log("first values:", clickId, copyId);
+//    console.log("first values:", clickId, copyId);
     $(document).on('click', clickId, function(event) {
         event.preventDefault();
         let copyText = document.getElementById(copyId);
@@ -861,7 +862,7 @@ function getCardList() {
             $('.userCard').removeClass('invisible');
 //            $("#otherOptions").removeClass("invisible");
         } else {
-            console.log(res);
+//            console.log(res);
             $('.prevCards').removeClass('invisible');
             $('#prevCards').html(""); // clear previous results, if any
             for (let x=0; x < res.results.length; x++) {
@@ -922,7 +923,7 @@ $(document).on('click', '.userCards', function(event) {
     event.preventDefault();
     createCard.cardId = $(this).parent().parent().find(".userCardsIdValue").val();
     $.getJSON('https://mecards-fullstack-capstone.herokuapp.com/onecard/' + createCard.cardId, function (res) {
-        console.log("card info:", res);
+//        console.log("card info:", res);
         let photoWidth = Number(res.results.width);
         let photoHeight = Number(res.results.height);
         if (photoWidth < 1.1*photoHeight) {
@@ -977,13 +978,13 @@ $(document).on('click', '.userCards', function(event) {
         UPDATE = true;
         setInitial();
     });
-    console.log("clicked button", createCard.cardId); // MAKE GET CALL TO ID
+//    console.log("clicked button", createCard.cardId); // MAKE GET CALL TO ID
 });
 
 // open saved card full-screen
 function displayCard() {
     $.getJSON('https://mecards-fullstack-capstone.herokuapp.com/creations/' + createCard.cardId, function (res) {
-        console.log("card info:", res);
+//        console.log("card info:", res);
         createCard.titleText = res.results.title;
         createCard.bodyText = res.results.body;
         createCard.footerText = res.results.footer;
@@ -1090,7 +1091,7 @@ $(document).ready(function () {
 
 
 // CODE FOR SHARED CARD -----------------------------------------------------------------------------------------------
-//https://mecards-fullstack-capstone.herokuapp.com/creations/5adcb68ee6d7ec1de48e45c0
+
 
 function displaySavedCard(cardId) {
     $.getJSON('https://mecards-fullstack-capstone.herokuapp.com/showsave/' + cardId, function (res) {
@@ -1099,12 +1100,13 @@ function displaySavedCard(cardId) {
         width = Number(res.results.width);
         height = Number(res.results.height);
         console.log(createCard);
-        if (width < 1.1*height) {
-            $("#previewBody").addClass("portraitPic");
-        }
-        else {
-            $("#previewBody").removeClass("portraitPic");
-        }
+//  portraitPic class no longer necessary for full screen display since photo became background image
+//        if (width < 1.1*height) {
+//            $("#previewBody").addClass("portraitPic");
+//        }
+//        else {
+//            $("#previewBody").removeClass("portraitPic");
+//        }
         window.onresize = function() {adjustCardHeight(width, height)};
         adjustCardHeight(width, height);
         $("#previewParent").removeClass("invisible");
