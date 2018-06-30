@@ -86,7 +86,6 @@ h1 {
     color: #715CAF;
     font-size: 2em;
     text-align: center;
-/*    font-family: 'Quicksand', sans-serif;*/
     font-family: 'Exo 2', sans-serif;
 }
 
@@ -95,7 +94,6 @@ h2 {
     font-size: 34px;
     color: #4E88A1;
     padding-top: 15px;
-    /*    padding-bottom: 20px;*/
 }
 
 
@@ -120,7 +118,6 @@ button {
 }
 
 .styleButton  {
-/*    padding: 12px 5px;*/
     padding: 2px;
     height: 50px;
     width: 40px;
@@ -135,11 +132,6 @@ button {
 .rightButton {
     margin-left: 1px;
     border-radius: 0 10px 10px 0;
-}
-
-#borderButtons {
-/*    margin-top: 50px;*/
-/*    bottom: 0;*/
 }
 
 .borderButton {
@@ -160,10 +152,8 @@ button:hover {
 
 input, textarea {
     box-shadow: 2px 2px 2px #0000008a inset;
-    /* ADJUST COLOR ONCE COLOR PALATTE FINALIZED */
     margin: 5px;
     padding-left: 10px;
-/*    font-family: 'Cutive Mono', monospace;*/
 }
 
 textarea {
@@ -516,24 +506,10 @@ footer a {
     color: #7AB7D1;
     cursor: copy;
 }
-/*
-
-.hideMe {
-    visibility: hidden;
-    display: none;
-}
-*/
-
 
 .invisible {
     display: none;
 }
-/*
-
-.makeVisible {
-    display: block;
-}
-*/
 
 .makeVisibleInline {
     display: inline;
@@ -636,54 +612,6 @@ a:hover {
     margin: 10px;
 }
 
-/*
-.userName {
-    color: #CC5297;
-    font-size: 1.3em;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-*/
-
-/*
-.alertBoxContainer {
-    display: none;
-    top: 0;
-    height: 100%;
-    margin: 0%;
-    width: 100%;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 500;
-}
-
-.alertBox {
-    display: none;
-    position: fixed;
-    /* center box in page */   /*
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 50%;
-    height: 50%;
-    background-color: black;
-    font-size: 1.5em;
-    text-align: center;
-    padding: 50px;
-    z-index: 501;
-    border: 7px dotted #fed9ba; */
-    /* creates solid lines inside & outside of dotted border */ /*
-    box-shadow: inset 0 -1px 0 0 #FE6767, inset 0 1px 0 0 #FE6767, 0 1px 0 0 #FE6767, 0 -1px 0 0 #FE6767, inset 1px 0 0 0 #FE6767, inset -1px 0 0 0 #FE6767, 1px 0 0 0 #FE6767, -1px 0 0 0 #FE6767;
-}
-
-.alertBox button {
-    margin: 50px;
-    font-size: .8em;
-}
-*/
-
 form {
     width: 100%;
     display: inline-block;
@@ -699,9 +627,6 @@ form {
 
 
 /* ================================================================== */
-@media only screen and (max-width: 1300px) {
-
-}
 
 /* Goes from multi-column to single column at 1150 px */
 
